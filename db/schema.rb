@@ -10,10 +10,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2020_08_17_142347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "rentals", force: :cascade do |t|
+    t.datetime "start_on"
+    t.datetime "end_on"
+    t.integer "total_price"
+    t.string "status"
+    t.bigint "user_id", null: false
+    t.bigint "tree_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["tree_id"], name: "index_rentals_on_tree_id"
+    t.index ["user_id"], name: "index_rentals_on_user_id"
+  end
+
+  create_table "trees", force: :cascade do |t|
+    t.string "name"
+    t.string "species"
+    t.string "address"
+    t.string "size"
+    t.string "weight"
+    t.string "description"
+    t.integer "price"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_trees_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "last_name"
+    t.string "first_name"
+    t.string "phone_number"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  add_foreign_key "rentals", "trees"
+  add_foreign_key "rentals", "users"
+  add_foreign_key "trees", "users"
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,5 +66,6 @@ ActiveRecord::Schema.define(version: 2020_08_17_142347) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 
 end
