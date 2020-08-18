@@ -74,3 +74,23 @@ cactus_loc = Rental.new(
   tree_id: cactus.id
   )
 cactus_loc.save!
+
+bananier = Rental.new(
+  start_on: Time.now,
+  end_on: Time.now + 10.days,
+  total_price: "230",
+  status: "free",
+  user_id: jean.id,
+  tree_id: bananier.id
+  )
+bananier_loc.save!
+
+chene_loc = Rental.new(
+  start_on: Time.now,
+  end_on: Time.now + 10.days,
+  total_price: "230",
+  status: "free",
+  user_id: marco.id,
+  tree_id: chene.id
+  )
+chene_loc.save!
