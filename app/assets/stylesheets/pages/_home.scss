@@ -1,4 +1,10 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+// .bg-image {
+//     filter: blur(8px);
+//     -webkit-filter: blur(8px);
+// }
+
 .homepage-banner {
     background-size: cover;
     background-position: center;
@@ -6,8 +12,9 @@
     // background-color: #ede6f2;
 
     h1 {
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: bold;;
+        font-family: 'Permanent Marker', cursive;
+        text-align: center;
+        font-weight: bold;
         margin: 0;
         color: #ede6f2;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -16,26 +23,68 @@
 
     p {
         font-size: 30px;
+        text-align: center;
         color: #ede6f2;
-        opacity: .8;
+        opacity: .9;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     }
 
-    .btn-green {
-        border: 2px solid #093A0A;
-        background-color: #ede6f2;
-        padding: 10px 20px;
+    .btn {
+        border: none;
+        display: block;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-left: 20px;
-        border-radius: 10px;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-        box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    }
-    .btn-green:hover {
-        background-color: #093A0A;
+        cursor: pointer;
+        text-transform: uppercase;
+        outline: none;
+        overflow: hidden;
+        position: relative;
         color: #ede6f2;
-    }
+        font-weight: 700;
+        font-size: 15px;
+        background-color: #222;
+        padding: 17px 60px;
+        margin: 0 auto;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+      }
+      
+      .btn span {
+        position: relative; 
+        z-index: 1;
+      }
+      
+      .btn:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 490%;
+        width: 140%;
+        background: #CD4A49;
+        -webkit-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+        transform: translateX(-98%) translateY(-25%) rotate(45deg);
+      }
+      
+      .btn:hover:after {
+        -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+        transform: translateX(-9%) translateY(-25%) rotate(45deg);
+      }
+    // .btn-green {
+    //     border: 2px solid #093A0A;
+    //     background-color: #ede6f2;
+    //     padding: 10px 20px;
+    //     text-align: center;
+    //     text-decoration: none;
+    //     display: inline-block;
+    //     font-size: 16px;
+    //     margin-left: 20px;
+    //     border-radius: 10px;
+    //     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    //     box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    // }
+    // .btn-green:hover {
+    //     background-color: #093A0A;
+    //     color: #ede6f2;
+    // }
 }
