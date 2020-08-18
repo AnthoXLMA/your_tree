@@ -1,0 +1,13 @@
+<h1 class="banner_index"><%= link_to 'Back to the tree info', tree_path(@tree), class: "btn btn-ghost back_link"%>Renting</h1>
+<div class="container">
+  <%= simple_form_for [@user, @rental] do |f| %>
+    <div class="container_one">
+      <%= f.input :start_on, as: :date %>
+      <%= f.input :end_on, as: :date %>
+      <%= f.association :tree %>
+    <%= f.submit "Rent", class: "btn btn-ghost rent" %>
+    </div>
+  <% end %>
+<br>
+
+</div>
