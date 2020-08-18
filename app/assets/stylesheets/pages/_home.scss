@@ -1,1 +1,41 @@
 // Specific CSS for your home-page
+.homepage-banner {
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    // background-color: #ede6f2;
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;;
+        margin: 0;
+        color: #ede6f2;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        font-size: 120px;
+    }
+
+    p {
+        font-size: 30px;
+        color: #ede6f2;
+        opacity: .8;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+
+    .btn-green {
+        border: 2px solid #093A0A;
+        background-color: #ede6f2;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 20px;
+        border-radius: 10px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    }
+    .btn-green:hover {
+        background-color: #093A0A;
+        color: #ede6f2;
+    }
+}
