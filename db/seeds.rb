@@ -121,9 +121,6 @@ cactus_loc.save!
 # new_rental = Rental.new(start_on: "20200304", end_on:"20200312", total_price: "230")
 # new_rental.save!
 
-# Tree.create(name: "Chene")
-# Tree.create(name: "Cactus")
-
 # Seeding Trees
 # puts 'Creating rentals...'
 # baobab = Tree.new(name: "Baobab")
@@ -131,14 +128,5 @@ cactus_loc.save!
 # cactus = Tree.new(name: "Cactus")
 # cactus.save!
 # puts 'Finished!'
+puts 'Finished!'
 
-# require "faker"
-# # TODO: Write a seed to insert 100 posts in the database
-# 100.times do
-#   post = Post.new(
-#     title: Faker::Commerce.product_name,
-#     url: Faker::Internet.url,
-#     votes: (0..1000).to_a.sample
-#   )
-#   post.save
-# end
