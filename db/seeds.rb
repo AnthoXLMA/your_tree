@@ -77,24 +77,6 @@ cactus_loc = Rental.new(
   )
 cactus_loc.save!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Seeding Rentals
 # 5.times do
 #   new_rental = Rental.new(
