@@ -1,0 +1,10 @@
+<h1 class="banner_index"><%= link_to "Home", "#", class: "btn btn-ghost"%>List of trees</h1>
+
+<div class="cards">
+  <% @trees.each do |tree| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path ("https://source.unsplash.com/500x300/?#{tree.name}") %>)">
+        <%= link_to tree.name, "#", class: "link_tree" %>
+      </div>
+  <% end %>
+</div>
+<br>
