@@ -62,6 +62,171 @@ cactus = Tree.new(
   )
 cactus.save!
 
+sapin = Tree.new(
+  name: "sapin",
+  species: "christmas tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: bill.id
+  )
+sapin.save!
+
+pin = Tree.new(
+  name: "pin",
+  species: "forest tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: marco.id
+  )
+pin.save!
+
+mimosa = Tree.new(
+  name: "mimosa",
+  species: "summer tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: jean.id
+  )
+mimosa.save!
+
+peuplier = Tree.new(
+  name: "peuplier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: bill.id
+  )
+peuplier.save!
+
+chene = Tree.new(
+  name: "chene",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: marco.id
+  )
+chene.save!
+
+platane = Tree.new(
+  name: "platane",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: jean.id
+  )
+platane.save!
+
+acacia = Tree.new(
+  name: "acacia",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: bill.id
+  )
+acacia.save!
+
+bouleau = Tree.new(
+  name: "bouleau",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: marco.id
+  )
+bouleau.save!
+
+bougainvillier = Tree.new(
+  name: "bougainvillier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: jean.id
+  )
+bougainvillier.save!
+
+palmier = Tree.new(
+  name: "palmier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: bill.id
+  )
+palmier.save!
+
+mandarinier = Tree.new(
+  name: "mandarinier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: marco.id
+  )
+mandarinier.save!
+
+pommier = Tree.new(
+  name: "pommier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: jean.id
+  )
+pommier.save!
+
+citronnier = Tree.new(
+  name: "citronnier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: bill.id
+  )
+citronnier.save!
+
+cerisier = Tree.new(
+  name: "cerisier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: marco.id
+  )
+cerisier.save!
+
+figuier = Tree.new(
+  name: "figuier",
+  species: "african tree",
+  address: "address",
+  size: "size",
+  weight: "weight",
+  description: "description",
+  user_id: jean.id
+  )
+figuier.save!
+
 puts 'Finished!'
 
 
@@ -129,4 +294,3 @@ cactus_loc.save!
 # cactus.save!
 # puts 'Finished!'
 puts 'Finished!'
-
