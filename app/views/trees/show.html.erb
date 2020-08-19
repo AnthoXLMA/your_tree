@@ -1,92 +1,54 @@
 <div class="container-show-tree">
 
+  <div class="tree-img">
+    <%= image_tag "arbre2.jpg", alt: "alttext", width: "100%"%>
+  </div>
 
-<div class="tree-img">
-  <%= image_tag "arbre.jpg", alt: "alttext", width: "100%"%>
-</div>
-
-<div class="show-right-part">
+    <div class="show-right-part">
     <div class ="link-back">
-    <%= link_to "Back", trees_path %>
-  </div>
-
-  <div class="title-show">
-    <h1><%=@tree.name%></h1>
-    <p><%=@tree.species%></p>
-  </div>
-<br>
-
-<br>
-<div class="price-description">
-    <div class="title-descr">
-      <p><%=@tree.description%></p>
+      <%= link_to "Back", trees_path %>
     </div>
-    <div class= "card-price">
     <div class="title-show">
-      <h2>$<%=@tree.price%>100</h2>
+      <h1><%=@tree.name%></h1>
+      <p><%=@tree.species%></p>
     </div>
-  </div>
-</div>
-<br>
-  <div class="trees-aspects">
-    <div class="size-tree">
-    <h2>Size</h2><p><%=@tree.size%></p>
-    <i class="fas fa-tree small"></i>
-    <i class="fas fa-tree medium"></i>
-    <i class="fas fa-tree large"></i>
+    <div class="price-description">
+      <div class="title-descr">
+        <p><%=@tree.description%></p>
+      </div>
+
+      <div class= "card-price">
+        <div class="title-show">
+          <h2>$<%=@tree.price%>100</h2>
+        </div>
+      </div>
     </div>
 
-    <div class="title-w">
-      <h2>Weight</h2><p><%=@tree.weight%></p>
+    <div class="trees-aspects">
+      <div class="size-tree">
+        <h2></h2><p><%=@tree.size%></p>
+        <i class="fas fa-tree small"></i>
+        <i class="fas fa-tree medium"></i>
+        <i class="fas fa-tree large"></i>
+      </div>
+      <div class="title-w">
+        <h2></h2><p><%=@tree.weight%></p>
+      </div>
     </div>
-  </div>
-  <br>
+
+    <div class="card-owner">
+      <h2></h2>
+      <p>This tree belong to <%=@tree.user.first_name%> <%=@tree.user.last_name%>, <%=@tree.address%></p>
+    </div>
 
 
-<br>
-
-<div class="card-owner">
-<!--   <div class="avatars">
-    <img class="avatar" alt="avatar" src="https://kitt.lewagon.com/placeholder/users/cveneziani" />
-  </div> -->
-
-  <div class="title-show">
-    <h2></h2>
-    <p>This tree belong to <%=@tree.user.first_name%> <%=@tree.user.last_name%>, <%=@tree.address%></p>
-  </div>
-</div>
-<!-- <div class="navbar-offer">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-  </nav>
-</div> -->
-
-<!--   <div class="tree-details">
-    <li><%= @tree.species %></li>
-    <li><%= @tree.address %></li>
-    <li><%= @tree.size %></li>
-    <li><%= @tree.weight %></li>
-    <li><%= @tree.description %></li>
-    <li><%= @tree.price %></li>
-  </div> -->
-
-  <a class="btn btn-book" href="#">Book Now</a>
-
-
-  </div>
-
-</div>
-
-<!-- <div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-github"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-facebook"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  </div>
-
-  <div class="footer-copyright">
-    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
-  </div> -->
+    <div class="formul">
+        <%= simple_form_for [@tree, @rental] do |f| %>
+      <div class="container_one">
+        <%= f.input :start_on, as: :date %>
+        <%= f.input :end_on, as: :date %>
+        <%= f.association :tree %>
+        <%= f.submit "Book Now"%>
+      </div>
+      <% end %>
+    </div>

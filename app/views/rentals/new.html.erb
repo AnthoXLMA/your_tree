@@ -1,4 +1,4 @@
-<h1 class="banner_index"><%= link_to 'Back to the tree info', tree_path(@tree), class: "btn btn-ghost back_link"%>Renting</h1>
+
 <div class="container">
   <%= simple_form_for [@user, @rental] do |f| %>
     <div class="container_one">
@@ -8,6 +8,40 @@
     <%= f.submit "Rent", class: "btn btn-ghost rent" %>
     </div>
   <% end %>
+
 <br>
 
 </div>
+<!--
+<div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>August<br><span style="font-size:18px">2017</span></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+</ul>
+ -->
