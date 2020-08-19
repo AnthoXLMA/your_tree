@@ -3,7 +3,7 @@
     <% @trees.each do |tree| %>
       <div class="cards">
         <%= link_to tree_path(tree), class: 'link_tree' do %>
-          <div class="card-category" style="background-image: url(<%= image_path ("https://source.unsplash.com/500x300/?#{tree.name}") %>)">
+          <div class="card-category" style="background-image: url('<%= cl_image_path tree.photo.key %>')">
             <%#= link_to tree.name, tree_path(tree), class: "link_tree" %>
           </div>
              <p class="category"> <%= tree.name %></p>
@@ -13,7 +13,7 @@
   </div>
 
   <div id="map"
-       style="width: 300vw; height: 100vh;"
+       style="width: 100%; height: 90vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>

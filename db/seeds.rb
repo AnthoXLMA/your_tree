@@ -16,24 +16,31 @@ marco = User.new(
   first_name: "Marco",
   last_name: "Dupont",
   email:"Marco@example.com",
-  password: "Hello2645"
+  password: "password",
+  phone_number: "0123456789"
   )
+marco.photo.attach(io: File.open(Rails.root.join('db/fixtures/users/avatar.png')), filename: 'avatar.png')
 marco.save!
 
 jean = User.new(
   first_name: "Jean",
   last_name:"Bourvil",
   email:"Jean@example.com",
-  password: "Helilo285"
+  password: "password",
+  phone_number: "1234567890"
   )
+jean.photo.attach(io: File.open(Rails.root.join('db/fixtures/users/avatar.png')), filename: 'avatar.png')
+
 jean.save!
 
 bill = User.new(
   first_name: "Bill",
   last_name: "Withers",
   email:"Bill@example.com",
-  password: "Hel285"
+  password: "password",
+  phone_number: "0023456789"
   )
+bill.photo.attach(io: File.open(Rails.root.join('db/fixtures/users/avatar.png')), filename: 'avatar.png')
 bill.save!
 
 
@@ -41,191 +48,121 @@ bill.save!
 puts 'Creating trees...'
 baobab = Tree.new(
   name: "Baobab",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
+  species: "African tree",
+  address: "28 rue de Raymond Poincaré, 44300 Nantes",
+  size: "small",
+  weight: "66lb",
+  description: "A typical tree of dry tropical Africa, the baobab is the emblem of Senegal. This giant of the African savannas cannot survive in the open ground in mainland France. On the other hand, it is possible to welcome a baobab at home because a young plant can be grown as an indoor plant!",
+  price: 5,
   user_id: marco.id
   )
+baobab.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Baobab.jpeg')), filename: 'Baobab.jpeg')
 baobab.save!
 
 
 cactus = Tree.new(
   name: "Cactus",
   species: "Desert Tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: jean.id
+  address: "51 rue La Boétie, 75016 Paris",
+  size: "medium",
+  weight: "440lb",
+  description: "The cactus belongs to the family Cactaceae, which encompasses almost 2,000 different species, according to the Aggie Horticulture website of Texas A&M University. The cactus is an iconic representation of desert plant life, known for its prickly needles and often towering height.",
+  price: 5,
+  user_id: marco.id
   )
+cactus.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Cactus.jpeg')), filename: 'Cactus.jpeg')
 cactus.save!
 
 sapin = Tree.new(
-  name: "sapin",
-  species: "christmas tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: bill.id
+  name: "Sapin",
+  species: "Christmas tree",
+  address: "54 Chemin Des Bateliers, 49100 Angers",
+  size: "large",
+  weight: "1322lb",
+  description: "The fir trees are trees conifers of the genus Abies originating in temperate regions of the northern hemisphere. They are part of the Pinaceae family . They are recognizable by the way the needles attach to the shank, their shapes which differ from spruce, and their erect cones which disintegrate at maturity.",
+  price: 10,
+  user_id: marco.id
   )
+sapin.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Sapin.jpeg')), filename: 'Sapin.jpeg')
 sapin.save!
 
 pin = Tree.new(
-  name: "pin",
-  species: "forest tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
+  name: "Pin",
+  species: "Forest tree",
+  address: "22 rue du minage, 17000 La Rochelle",
+  size: "large",
+  weight: "1322lb",
+  description: "A pine is any conifer in the genus Pinus of the family Pinaceae. Pinus is the sole genus in the subfamily Pinoideae. The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms. Pine may also refer to the lumber derived from pine trees; pine is one of the more extensively used types of wood used as lumber.",
+  price: 10,
   user_id: marco.id
   )
+pin.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Pin.jpeg')), filename: 'Pin.jpeg')
 pin.save!
 
 mimosa = Tree.new(
-  name: "mimosa",
-  species: "summer tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: jean.id
+  name: "Mimosa",
+  species: "Summer tree",
+  address: "79 boulevard de la Liberation, 13014 Marseille",
+  size: "medium",
+  weight: "440lb",
+  description: "Mimosa is a genus of trees of the Mimosaceae familyaccording to the classical classification of Cronquist (1981) or of the great family of Fabaceae and of the subfamily of Mimosoideae according to the phylogenetic classification. It includes nearly 400 species.",
+  price: 5,
+  user_id: marco.id
   )
+mimosa.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Mimosa.jpeg')), filename: 'Mimosa.jpeg')
 mimosa.save!
 
-peuplier = Tree.new(
-  name: "peuplier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: bill.id
-  )
-peuplier.save!
-
 chene = Tree.new(
-  name: "chene",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
+  name: "Chêne",
+  species: "Forest tree",
+  address: "3 rue des Minimes, 37926 Tours",
+  size: "large",
+  weight: "1322lb",
+  description: "Oak is the vernacular name for many species of trees and shrubs belonging to the genus Quercus , and some related genera of the Fagaceae family , notably Cyclobalanopsis and Lithocarpus .",
+  price: 10,
   user_id: marco.id
   )
+chene.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Chene.jpeg')), filename: 'Chene.jpeg')
 chene.save!
 
-platane = Tree.new(
-  name: "platane",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: jean.id
-  )
-platane.save!
-
 acacia = Tree.new(
-  name: "acacia",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: bill.id
+  name: "Acacia",
+  species: "African tree",
+  address: "Avenue de la République, 83056 Toulon",
+  size: "large",
+  weight: "1322lb",
+  description: "Acacia, commonly known as the wattles or acacias, is a large genus of shrubs and trees in the subfamily Mimosoideae of the pea family Fabaceae. Initially, it comprised a group of plant species native to Africa and Australia.",
+  price: 10,
+  user_id: marco.id
   )
+acacia.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Acacia.jpeg')), filename: 'Acacia.jpeg')
 acacia.save!
 
-bouleau = Tree.new(
-  name: "bouleau",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
+palmier = Tree.new(
+  name: "Palmier",
+  species: "Tropical tree",
+  address: "Promenade des Anglais, 06000 Nice",
+  size: "large",
+  weight: "1322lb",
+  description: "A palm tree is a plant of the Arecaceae botanical family , well known by date palms and coconut palms . Palm trees take the form of perennial lianas , shrubs and trees . They are the only members of the only Arecaceae family in the order Arecales. They grow in hot climates.",
+  price: 10,
   user_id: marco.id
   )
-bouleau.save!
-
-bougainvillier = Tree.new(
-  name: "bougainvillier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: jean.id
-  )
-bougainvillier.save!
-
-palmier = Tree.new(
-  name: "palmier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: bill.id
-  )
+palmier.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Palmier.jpeg')), filename: 'Palmier.jpeg')
 palmier.save!
 
-mandarinier = Tree.new(
-  name: "mandarinier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: marco.id
-  )
-mandarinier.save!
-
 pommier = Tree.new(
-  name: "pommier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: jean.id
-  )
-pommier.save!
-
-citronnier = Tree.new(
-  name: "citronnier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: bill.id
-  )
-citronnier.save!
-
-cerisier = Tree.new(
-  name: "cerisier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
+  name: "Pommier",
+  species: "Fruit tree",
+  address: "Place du Général-de-Gaulle, 76000 Rouen",
+  size: "large",
+  weight: "1322lb",
+  description: "The apple trees are trees of the genus botanical Malus and the family of Rosaceae , the fruit is the apple . This genus includes some forty species of trees or shrubs , the most important of which, in terms of human nutrition , is the domestic apple tree ( Malus domestica ). Today we know more than 20,000 varieties.",
+  price: 10,
   user_id: marco.id
   )
-cerisier.save!
-
-figuier = Tree.new(
-  name: "figuier",
-  species: "african tree",
-  address: "address",
-  size: "size",
-  weight: "weight",
-  description: "description",
-  user_id: jean.id
-  )
-figuier.save!
+pommier.photo.attach(io: File.open(Rails.root.join('db/fixtures/trees/Pommier.jpg')), filename: 'Pommier.jpg')
+pommier.save!
 
 puts 'Finished!'
 
@@ -237,7 +174,7 @@ cactus_loc = Rental.new(
   end_on: Time.now + 10.days,
   total_price: "230",
   status: "free",
-  user_id: jean.id,
+  user_id: marco.id,
   tree_id: cactus.id
   )
 cactus_loc.save!
