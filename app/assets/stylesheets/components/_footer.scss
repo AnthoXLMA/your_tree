@@ -1,6 +1,6 @@
 .footer {
     background: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -30,6 +30,7 @@
   }
   .footer-copyright span {
     color: #CD4A49 ;
-    
   }
-  
+  .img-logo {
+      width: 30px;
+  }
