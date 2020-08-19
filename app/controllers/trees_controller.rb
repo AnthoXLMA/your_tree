@@ -1,8 +1,15 @@
 class TreesController < ApplicationController
+  before_action :set_tree, only: [:show]
 
-before_action :set_tree, only: [:show]
   def index
-    @trees = Tree.all
+    @trees = Tree.geocoded
+    @markers = @trees.map do |tree|
+      {
+        lat: tree.latitude,
+        lng: tree.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { tree: tree })
+      }
+    end
   end
 
   def show
