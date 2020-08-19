@@ -26,6 +26,7 @@
   left: 200px;
   height: 100px;
   border-color: black;
+  
 }
 
 .title-show h1 {
@@ -42,13 +43,15 @@
 
 .title-show p {
   font-family:'Noto';
+  text-align: center;
   // left: 200px;
   // height: 100px;
 }
 
 .title-descr h2, p {
   font-family: 'Noto';
-  border-color: black;
+  text-align: justify;;
+  // border-color: black;
 }
 
 .title-descr {
@@ -56,10 +59,9 @@
   margin-left: auto;
   overflow: hidden;
   height: 150px;
-  background: white;
   width: 550px;
   display: flex;
-  box-shadow: 0 0 10px grey;
+  border-left: 5px solid #CD4A49;
 }
 
 .trees-aspects {
@@ -102,7 +104,7 @@
   }
 }
 
-.price-description {
+.description {
   display: flex;
   margin: 0 20px;
 }
