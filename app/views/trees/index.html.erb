@@ -1,10 +1,20 @@
-<h1 class="banner_index"><%= link_to "Home", "/", class: "btn btn-ghost"%>List of trees</h1>
-
-<div class="cards">
-  <% @trees.each do |tree| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= image_path ("https://source.unsplash.com/500x300/?#{tree.name}") %>)">
-        <%= link_to tree.name, tree_path(tree), class: "link_tree" %>
+<div class="all_container">
+  <div class="cards">
+    <% @trees.each do |tree| %>
+      <div class="cards">
+        <%= link_to tree_path(tree), class: 'link_tree' do %>
+          <div class="card-category" style="background-image: url(<%= image_path ("https://source.unsplash.com/500x300/?#{tree.name}") %>)">
+            <%#= link_to tree.name, tree_path(tree), class: "link_tree" %>
+          </div>
+             <p class="category"> <%= tree.name %></p>
+        <% end %>
       </div>
-  <% end %>
+    <% end %>
+  </div>
+
+  <div id="map"
+       style="width: 300vw; height: 100vh;"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
-<br>
