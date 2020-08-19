@@ -6,6 +6,7 @@ before_action :set_tree, only: [:show]
   end
 
   def show
+    @rental = Rental.new
   end
 
   private

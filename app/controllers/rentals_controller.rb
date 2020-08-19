@@ -6,16 +6,23 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rental_params)
-
+    @rental.user_id = current_user
+    @rental.total_price = 200
     @tree = Tree.find(params[:tree_id])
-    @rental.tree = @tree
+    # @rental.tree = @tree
+    raise
 
     if @rental.save
+      raise
       redirect_to user_path(@tree)
     else
       render :new
     end
   end
+
+  # def total_price
+  #   total_price = @
+  # end
 
   private
 
