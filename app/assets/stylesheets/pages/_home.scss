@@ -1,9 +1,5 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
-// .bg-image {
-//     filter: blur(8px);
-//     -webkit-filter: blur(8px);
-// }
 
 .colortext {
     color: #ede6f2;
@@ -14,11 +10,10 @@
 }
 
 .homepage-banner {
-    background-size: cover;
-    background-position: center;
-    padding: 150px 0;
-    // background-color: #ede6f2;
-
+    // background-size: cover;
+    // background-position: center;
+    padding: 100px 0 550px 0;
+    
     h1 {
         font-family: 'Permanent Marker', cursive;
         text-align: center;
