@@ -16,8 +16,9 @@
         <li class="nav-item dropdown">
           <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "My trees", owner_trees_path, class: "dropdown-item" %>
+            <%= link_to "Add new tree", new_owner_tree_path, class: "dropdown-item" %>
+            <%= link_to "My reservations", rentals_path, class: "dropdown-item" %>
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
@@ -29,4 +30,3 @@
     </ul>
   </div>
 </div>
-
