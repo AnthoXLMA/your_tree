@@ -7,8 +7,8 @@
 }
 
 .tree-img {
-  width: 70%;
-  height: 50px;
+  width: 60%;
+  height: 60%;
 }
 
 .show-right-part {
@@ -22,14 +22,14 @@
 }
 
 .title-show {
+  margin-top: 20px;
   font-family:'Noto';
   left: 200px;
-  height: 100px;
   border-color: black;
-  
 }
 
 .title-show h1 {
+  margin-bottom: -5px;
   font-family:'Noto';
   // left: 200px;
   // height: 100px;
@@ -49,16 +49,17 @@
 }
 
 .title-descr h2, p {
-  font-family: 'Noto';
-  text-align: justify;;
-  // border-color: black;
+  // font-family: 'Noto';
+  border-color: black;
 }
 
 .title-descr {
+  padding-left: 10px;
+  text-align: justify;
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
-  height: 150px;
+  // height: 150px;
   width: 550px;
   display: flex;
   border-left: 5px solid #CD4A49;
@@ -67,7 +68,8 @@
 .trees-aspects {
   display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+  align-items: flex-end;
+  margin: 50px 0;
 }
 
 .card-price {
@@ -81,10 +83,10 @@
 }
 
 .card-owner {
+  font-family: 'Work Sans', sans-serif;
   border-color: black;
   overflow: hidden;
   height: 120px;
-  display: flex;
   align-items: center;
   margin-left: 20px;
 }
