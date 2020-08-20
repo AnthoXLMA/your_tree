@@ -20,15 +20,28 @@
     </div>
 
     <div class="trees-aspects">
+
       <div class="size-tree">
-        <h2></h2><p><%=@tree.size%></p>
-        <i class="fas fa-tree small"></i>
-        <i class="fas fa-tree medium"></i>
-        <i class="fas fa-tree large"></i>
+        <% if @tree.size == 'small'%>
+          <i class="fas fa-tree small" style="color:#c99e89;"></i>
+          <i class="fas fa-tree medium"></i>
+          <i class="fas fa-tree large"></i>
+        <% elsif @tree.size == 'medium' %>
+          <i class="fas fa-tree small"></i>
+          <i class="fas fa-tree medium"style="color:#c99e89;"></i>
+          <i class="fas fa-tree large"></i>'
+        <% else %>
+          <i class="fas fa-tree small"></i>
+          <i class="fas fa-tree medium"></i>
+          <i class="fas fa-tree large" style="color:#c99e89;"></i>'
+        <% end %>
       </div>
+
       <div class="title-w">
-        <h2></h2><p><%=@tree.weight%></p>
+        <h2><%=@tree.weight%></h2>
       </div>
+
+
       <div class= "card-price">
         <div class="title-show">
           <h2>$<%=@tree.price%></h2>
