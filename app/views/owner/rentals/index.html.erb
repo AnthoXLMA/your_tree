@@ -1,0 +1,17 @@
+<h1>Active your current Rentals</h1>
+
+<div class="cards-owner-rentals">
+<% @rentals.each do |rental|%>
+  <h3><%= rental.start_on %></h3>
+  <h3><%= rental.end_on %></h3>
+  <h3><%= rental.total_price %></h3>
+  <h3><%= rental.status %></h3>
+  <h3><%= rental.user.first_name %> <%= rental.user.last_name %> has made this rental</h3>
+  <h3><%= rental.tree_id %></h3>
+  <h3>This rental has been booked on <%= rental.created_at %></h3>
+  <h3>You updates this rental on <%= rental.updated_at %></h3>
+<% end %>
+</div>
+
+
+
