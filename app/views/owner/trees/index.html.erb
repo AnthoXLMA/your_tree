@@ -1,0 +1,17 @@
+
+
+<div class="cards">
+<% @trees.each do |tree|%>
+<h2><%= tree.name %></h2>
+<h3><%= tree.species %></h3>
+<p><%= tree.description %></p>
+<h3><%= tree.address %></h3>
+<h3><%= tree.size %></h3>
+<h3><%= tree.weight %></h3>
+
+<% end %>
+</div>
+
+<div class="button">
+  <%= link_to 'Create a tree' %>
+</div>
