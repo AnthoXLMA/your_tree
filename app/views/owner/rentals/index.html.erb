@@ -1,6 +1,6 @@
 <p><%= current_user.email %></p>
 
-<h1>Active your current rentals</h1>
+<h1>See your current rentals</h1>
 
 <div>
 <% @rentals.each do |rental|%>
@@ -16,14 +16,16 @@
 
   <h3>You updated this rental on <%= rental.updated_at %></h3>
 
-<div class="button">
-  <div class="button btn btn-confirm">
-  Confirm Rental
-  </div>
-  <div class="button btn btn-confirm">
-  Refuse Rental
-  </div>
-</div>
+<% if rental.status == 'pending' %>
 
+      <div class="button btn btn-confirm">
+      <%=  link_to 'Accept Rental', accept_owner_rental_path(rental.id), method: :patch %>
+      </div>
+
+      <div class="button btn btn-confirm">
+      <%= link_to 'Refuse Rental', refuse_owner_rental_path(rental.id), method: :patch %>
+      </div>
+<% else %>
+<% end %>
 <% end %>
 </div>
