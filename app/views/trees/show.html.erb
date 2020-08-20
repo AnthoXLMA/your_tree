@@ -1,9 +1,7 @@
-<div class="container-show-tree">
-
-  <div class="tree-img">
-    <%= image_tag "arbre2.jpg", alt: "alttext", width: "100%"%>
-  </div>
-
+<div class="all_container show">
+  <div class="link_tree">
+  <div class="card-category" style="background-image: url('<%= cl_image_path @tree.photo.key %>')"></div>
+</div>
   <div class="show-right-part">
     <%# <div class ="link-back">
       <%= link_to "Back", trees_path %>
@@ -23,17 +21,17 @@
 
       <div class="size-tree">
         <% if @tree.size == 'small'%>
-          <i class="fas fa-tree small" style="color:#c99e89;"></i>
+          <i class="fas fa-tree small" style="color:#CD4A49;"></i>
           <i class="fas fa-tree medium"></i>
           <i class="fas fa-tree large"></i>
         <% elsif @tree.size == 'medium' %>
           <i class="fas fa-tree small"></i>
-          <i class="fas fa-tree medium"style="color:#c99e89;"></i>
+          <i class="fas fa-tree medium"style="color:#CD4A49;"></i>
           <i class="fas fa-tree large"></i>'
         <% else %>
           <i class="fas fa-tree small"></i>
           <i class="fas fa-tree medium"></i>
-          <i class="fas fa-tree large" style="color:#c99e89;"></i>
+          <i class="fas fa-tree large" style="color:#CD4A49;"></i>
         <% end %>
       </div>
 
@@ -52,7 +50,7 @@
     <div class="card-owner">
       <p><i class="fas fa-user"></i> This tree belongs to <%=@tree.user.first_name%> <%=@tree.user.last_name%></p>
       <p><i class="fas fa-map-marked-alt"></i> <%=@tree.address%></p>
-      
+
     </div>
 
 
