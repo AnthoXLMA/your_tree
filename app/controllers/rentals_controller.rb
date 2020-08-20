@@ -11,8 +11,8 @@ class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
     @rental.user = current_user
-    @rental.total_price = 200
     @tree = Tree.find(params[:tree_id])
+    @rental.total_price = ((@rental.end_on - @rental.start_on) / 86_400) * @tree.price
     @rental.tree = @tree
 
     if @rental.save
