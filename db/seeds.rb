@@ -168,16 +168,16 @@ puts 'Finished!'
 
 
 # Seeding Rentals
-puts 'Creating Rentals...'
-cactus_loc = Rental.new(
-  start_on: Time.now,
-  end_on: Time.now + 10.days,
-  total_price: "230",
-  status: "free",
-  user_id: marco.id,
-  tree_id: cactus.id
-  )
-cactus_loc.save!
+#puts 'Creating Rentals...'
+#cactus_loc = Rental.new(
+#  start_on: Time.now,
+#  end_on: Time.now + 10.days,
+#  total_price: "230",
+#  status: status.value,
+#  user_id: marco.id,
+#  tree_id: cactus.id
+#  )
+#cactus_loc.save!
 
 # Seeding Rentals
 # 5.times do
