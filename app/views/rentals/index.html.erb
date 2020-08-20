@@ -11,8 +11,8 @@
             <h4 class="category">Start: <%= rental.start_on %></h4>
             <h4 class="category">End: <%= rental.end_on %></p>
             <h5 class="category">Total price: <%= rental.total_price %>$</h5>
-            <h5 class="category">Name owner:</h5>
-            <h6 class="category">Avatar owner:</h6>
+            <h5 class="category"><%= rental.user.first_name %> <%= rental.user.last_name %></h5>
+            <h6 class="category">Avatar owner: </h6>
             <h6 class="category"> <%= rental.status %></h6>
         </div>
     <% end %>
