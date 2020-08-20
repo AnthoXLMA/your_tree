@@ -1,0 +1,20 @@
+<div class="text">
+  <p>Your pending reservations</p>
+</div>
+
+<div class="all_container">
+  <div class="cards">
+    <% @rentals.each do |rental| %>
+      <div class="link_tree">
+        <div class="card-category" style="background-image: url('<%= cl_image_path rental.tree.photo.key %>')"></div>
+            <h1 class="category"> <%= rental.tree.name %></h1>
+            <h4 class="category">Start: <%= rental.start_on %></h4>
+            <h4 class="category">End: <%= rental.end_on %></p>
+            <h5 class="category">Total price: <%= rental.total_price %>$</h5>
+            <h5 class="category">Name owner:</h5>
+            <h6 class="category">Avatar owner:</h6>
+            <h6 class="category">Status: appending</h6>
+        </div>
+    <% end %>
+  </div>
+</div>
