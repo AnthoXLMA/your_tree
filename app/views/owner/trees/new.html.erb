@@ -1,0 +1,15 @@
+<div class="">
+  <h2>Add your tree infos</h2>
+    <%= simple_form_for [@tree] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :species %>
+      <%= f.input :description, as: :text %>
+      <%= f.input :address %>
+      <%= f.input :size %>
+      <%= f.input :weight %>
+      <%= f.input :price %>
+      <%= f.input :photo %>
+      
+      <%= f.submit "Add", class: "btn btn-ghost" %>
+    <% end %>
+</div>

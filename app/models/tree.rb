@@ -2,7 +2,7 @@ class Tree < ApplicationRecord
   has_many :rentals
   belongs_to :user
   has_one_attached :photo
-  validates :name, :address, :size, :weight, :description, :price, presence: true
+  validates :name, :address, :size, :weight, :description, :price, :species, presence: true
   validates :description, length: { maximum: 500 }
   validates :size, inclusion: { in: %w(small medium large) }
   validates :price, numericality: true
