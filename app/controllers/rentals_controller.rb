@@ -20,10 +20,6 @@ class RentalsController < ApplicationController
     end
   end
 
-  # def total_price
-  #   total_price = @
-  # end
-
   private
 
   def rental_params
