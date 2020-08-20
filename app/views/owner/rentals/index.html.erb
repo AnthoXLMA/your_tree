@@ -1,17 +1,29 @@
-<h1>Active your current Rentals</h1>
+<p><%= current_user.email %></p>
 
-<div class="cards-owner-rentals">
+<h1>Active your current rentals</h1>
+
+<div>
 <% @rentals.each do |rental|%>
-  <h3><%= rental.start_on %></h3>
-  <h3><%= rental.end_on %></h3>
-  <h3><%= rental.total_price %></h3>
-  <h3><%= rental.status %></h3>
   <h3><%= rental.user.first_name %> <%= rental.user.last_name %> has made this rental</h3>
-  <h3><%= rental.tree_id %></h3>
   <h3>This rental has been booked on <%= rental.created_at %></h3>
-  <h3>You updates this rental on <%= rental.updated_at %></h3>
-<% end %>
+
+  <h3>From <%= rental.start_on %></h3>
+  <h3>To <%= rental.end_on %></h3>
+
+  <h3><%= rental.tree.name %></h3>
+  <h3><%= rental.status %></h3>
+  <h3>$<%= rental.total_price %></h3>
+
+  <h3>You updated this rental on <%= rental.updated_at %></h3>
+
+<div class="button">
+  <div class="button btn btn-confirm">
+  Confirm Rental
+  </div>
+  <div class="button btn btn-confirm">
+  Refuse Rental
+  </div>
 </div>
 
-
-
+<% end %>
+</div>
