@@ -1,22 +1,25 @@
+<div class="all_container">
+  <div class="cards">
+
     <div class="text">
       <p>Choose your tree for your next event</p>
     </div>
-<div class="all_container">
-  <div class="cards">
-    <% @trees.each do |tree| %>
-      <div class="cards">
-        <%= link_to tree_path(tree), class: 'link_tree' do %>
-          <div class="card-category" style="background-image: url('<%= cl_image_path tree.photo.key %>')">
-            <%#= link_to tree.name, tree_path(tree), class: "link_tree" %>
-          </div>
-             <p class="category"> <%= tree.name %></p>
-        <% end %>
-      </div>
-    <% end %>
+    <div class="cards">
+      <% @trees.each do |tree| %>
+        <div class="cards">
+          <%= link_to tree_path(tree), class: 'link_tree' do %>
+            <div class="card-category" style="background-image: url('<%= cl_image_path tree.photo.key %>')">
+              <%#= link_to tree.name, tree_path(tree), class: "link_tree" %>
+            </div>
+               <p class="category"> <%= tree.name %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div id="map"
-       style="width: 100%; height: 90vh;"
+       style="width: 100%; height: 100vh;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>

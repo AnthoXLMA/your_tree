@@ -1,9 +1,10 @@
 .cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
   margin: 10px;
+  position: relative;
 }
 
 // Smallest device
@@ -59,9 +60,12 @@
 
 .category {
   text-align: center;
-  color: #C4947C;
+  color: white;
   font-size: 35px;
   font-weight: bold;
+  background-color: black;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .link_tree {
@@ -111,17 +115,6 @@
 .card-product .card-product-infos {
   padding: 60px;
   width: 200px;
-}
-
-.all_container {
-  display: flex;
-}
-
-.text {
-  margin-left: 35px;
-  font-size: 35px;
-  font-weight: bold;
-  color:#CD4A49;
 }
 
 .rent {
