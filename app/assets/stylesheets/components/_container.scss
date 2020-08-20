@@ -2,11 +2,6 @@
   position: relative;
 }
 
-.footer {
-  background-color:black;
-  height: 150px;
-}
-
 .footer-copyright {
   color: #eae7e3;
 }
@@ -16,14 +11,19 @@
 
 }
 
-.footer-links {
-
-}
-
 .container-show-tree {
   display: flex;
 }
 
 .all_container {
   display: flex;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }
