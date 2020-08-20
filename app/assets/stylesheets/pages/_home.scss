@@ -14,7 +14,7 @@
     // background-position: center;
     padding: 100px 0 550px 0;
     height: 80vh;
-    
+
     h1 {
         font-family: 'Permanent Marker', cursive;
         text-align: center;
@@ -51,12 +51,12 @@
         margin: 0 auto;
         box-shadow: 0 5px 15px rgba(0,0,0,0.20);
     }
-    
+
     .btn-to-index span {
-        position: relative; 
+        position: relative;
         z-index: 1;
     }
-    
+
     .btn-to-index:after {
         content: "";
         position: absolute;
@@ -70,7 +70,7 @@
         -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
         transform: translateX(-98%) translateY(-25%) rotate(45deg);
     }
-      
+
     .btn-to-index:hover:after {
         -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
         transform: translateX(-9%) translateY(-25%) rotate(45deg);
