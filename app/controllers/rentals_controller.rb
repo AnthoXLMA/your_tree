@@ -1,4 +1,8 @@
 class RentalsController < ApplicationController
+  def index
+    @rentals = Rental.all
+  end
+
   def new
     @tree = Tree.find(params[:tree_id])
     @rental = Rental.new
@@ -6,15 +10,13 @@ class RentalsController < ApplicationController
 
   def create
     @rental = Rental.new(rental_params)
-    @rental.user_id = current_user
+    @rental.user = current_user
     @rental.total_price = 200
     @tree = Tree.find(params[:tree_id])
-    # @rental.tree = @tree
-    raise
+    @rental.tree = @tree
 
     if @rental.save
-      raise
-      redirect_to user_path(@tree)
+      redirect_to rentals_path
     else
       render :new
     end
@@ -23,6 +25,6 @@ class RentalsController < ApplicationController
   private
 
   def rental_params
-    params.require(:rental).permit(:start_on, :end_on, :total_price, :status, :tree_id)
+    params.require(:rental).permit(:start_on, :end_on, :status, :total_price, :tree_id)
   end
 end

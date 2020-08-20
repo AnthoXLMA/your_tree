@@ -6,7 +6,8 @@ Rails.application.routes.draw do
     resources :rentals, only: [:new, :create]
   end
 
-  resources :rentals, only: [:index]
+  resources :rentals, only: [:index, :new, :create]
+
 
   namespace :owner do
     resources :trees, only: [:index, :new, :create]
