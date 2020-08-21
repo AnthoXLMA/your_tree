@@ -22,8 +22,8 @@
       <div class="confirmation">
         <% if rental.status == 'pending' %>
         <div class="flex-buttons">
-          <%=  link_to 'Accept Rental', accept_owner_rental_path(rental.id), class: "btn-tree-show", method: :patch%>
-          <%= link_to 'Refuse Rental', refuse_owner_rental_path(rental.id), class: "btn-tree-show", method: :patch %>
+          <%=  link_to 'Accept Rental', accept_owner_rental_path(rental.id), class: "btn btn-success", method: :patch%>
+          <%= link_to 'Refuse Rental', refuse_owner_rental_path(rental.id), class: "btn btn-danger", method: :patch %>
         </div>
         <% end %>
       </div>
