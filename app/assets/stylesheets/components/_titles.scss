@@ -8,9 +8,9 @@
 .text {
   text-align: center;
   font-size: 35px;
-  font-weight: bold;
   color:white;
   background-color: #CD4A49;
+  width: 100%;
   opacity: 0.9;
   display: flex;
   align-content: center;
@@ -32,4 +32,13 @@
 
 .text-card {
   font-family: 'Work Sans';
+.tree_name {
+  background-color: #CD4A49;
+  color: white;
+}
+
+.tree_description {
+  margin-top: 10px;
+  background-color: #222222;
+  color: white;
 }

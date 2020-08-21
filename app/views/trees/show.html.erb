@@ -1,14 +1,14 @@
-<div class="all_container show">
-  <div class="link_tree">
-  <div class="card-category" style="background-image: url('<%= cl_image_path @tree.photo.key %>')"></div>
+<div class="all_container showw">
+  <div class="link_tree_show">
+  <div class="card_category_show" style="background-image: url('<%= cl_image_path @tree.photo.key %>')"></div>
 </div>
   <div class="show-right-part">
     <%# <div class ="link-back">
       <%= link_to "Back", trees_path %>
     <%# </div> %>
     <div class="title-show">
-      <h1><%=@tree.name%></h1>
-      <p><%=@tree.species%></p>
+      <h1 class="tree_name"><%=@tree.name%></h1>
+      <h3 class="tree_description"><%=@tree.species%></h3>
     </div>
 
     <div class="description">
@@ -59,7 +59,7 @@
       <div class="container_one">
         <%= f.input :start_on, as: :date %>
         <%= f.input :end_on, as: :date %>
-        <%= f.submit "Book Now"%>
+        <%= f.submit "Book Now", class: "btn btn-to-index"%>
       </div>
       <% end %>
     </div>
