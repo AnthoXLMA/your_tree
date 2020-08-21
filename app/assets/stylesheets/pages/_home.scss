@@ -13,11 +13,11 @@
     // background-size: cover;
     // background-position: center;
     padding: 100px 0 550px 0;
+    text-align: center;
     height: 87.7vh;
 
     h1 {
         font-family: 'Permanent Marker', cursive;
-        text-align: center;
         font-weight: bold;
         margin: 0;
         color: #ede6f2;
@@ -27,7 +27,6 @@
 
     p {
         font-size: 28px;
-        text-align: center;
         color: #ede6f2;
         opacity: .9;
         text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -36,7 +35,8 @@
 
     .btn-to-index {
         border: none;
-        display: block;
+        display: inline-block;
+        margin: 0 auto;
         text-align: center;
         cursor: pointer;
         text-transform: uppercase;
@@ -50,11 +50,6 @@
         padding: 17px 60px;
         margin: 0 auto;
         box-shadow: 0 5px 15px rgba(0,0,0,0.20);
-    }
-
-    .btn-to-index span {
-        position: relative;
-        z-index: 1;
     }
 
     .btn-to-index:after {
