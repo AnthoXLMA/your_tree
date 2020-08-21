@@ -3,21 +3,21 @@
 </div>
 
 <div class="container-owner">
-  <%= link_to 'Create a new tree', new_tree_path %>
-</div>
+  <%= link_to 'Create a new tree', new_tree_path, class: "btn" %>
 
-<%=link_to 'See Your Rentals', owner_rentals_path %>
+</div>
+  <%=link_to 'See Your Rentals', owner_rentals_path, class: "btn" %>
 
 <% @trees.each do |tree|%>
   <div class="card-owner-tree">
     <div class="text-card">
-      <h2><%= tree.name %></h2>
-      <h3><%= tree.species %></h3>
-      <p><%= tree.description %></p>
-      <h3><%= tree.address %></h3>
-      <h3><%= tree.size %></h3>
-      <h3><%= tree.weight %></h3>
-      <h3><%= tree.price %></h3>
+      <h1><%= tree.name %></h1>
+      <h2><%= tree.species %></h2>
+      <h2><%= tree.description %></h2>
+      <h2><%= tree.address %></h2>
+      <h2><%= tree.size %></h2>
+      <h2><%= tree.weight %></h2>
+      <h1>$<%= tree.price %></h1>
     </div>
     <div class="card-photo" style="background-image: url(<%= cl_image_path tree.photo.key %>)"></div>
   </div>
