@@ -130,6 +130,9 @@
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
+padding-left: 30px;
+opacity: 0.9;
 }
 
 .card-owner-tree {
@@ -175,6 +178,7 @@ align-items: center;
   }
 }
 
+
 .card-owner-rentals {
   // display: flex;
   margin-left: 30px;
@@ -218,4 +222,10 @@ align-items: center;
 //     background-position: center;
 //     background-size: cover;
 // }
+
+
+.card_index {
+  width: 100%;
+  border-bottom: solid 5px #222222;
+}
 
