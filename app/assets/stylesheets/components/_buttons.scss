@@ -1,6 +1,6 @@
 .btn-ghost {
-  color: #093A0A;
-  border: 1px solid #093A0A;
+  color: #FF5154;
+  border: 1px solid #FF5154;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -14,7 +14,7 @@
 .btn-ghost:hover {
   opacity: 1;
   color: white;
-  background-color: #093A0A;
+  background-color: #FF5154;
 }
 
 .btn-login {
@@ -37,6 +37,26 @@
   // top: 50%;
 }
 
+.btn-accept {
+  padding: 6px !important;
+  margin: 10px;
+
+
+  .btn-accept:hover {
+
+  }
+}
+
+.btn-refuse {
+  padding: 6px !important;
+  margin: 10px;
+
+
+  .btn-refuse:hover {
+
+  }
+}
+
 .submit {
   background-color: #CD4A49;
   color: white;
@@ -47,5 +67,14 @@
 
 .submit:hover {
   background-color: #222222;
+  color: white;
+}
+
+.confirmation {
+  display: flex;
+  margin-left: 90%;
+  margin-right: 70%;
+  width: 300px;
+  font-size: 10px;
   color: white;
 }

@@ -1,31 +1,32 @@
 <p><%= current_user.email %></p>
 
-<h1>See your current rentals</h1>
-
-<div>
-<% @rentals.each do |rental|%>
-  <h3><%= rental.user.first_name %> <%= rental.user.last_name %> has made this rental</h3>
-  <h3>This rental has been booked on <%= rental.created_at %></h3>
-
-  <h3>From <%= rental.start_on %></h3>
-  <h3>To <%= rental.end_on %></h3>
-
-  <h3><%= rental.tree.name %></h3>
-  <h3><%= rental.status %></h3>
-  <h3>$<%= rental.total_price %></h3>
-
-  <h3>You updated this rental on <%= rental.updated_at %></h3>
-
-<% if rental.status == 'pending' %>
-
-      <div class="button btn btn-confirm">
-      <%=  link_to 'Accept Rental', accept_owner_rental_path(rental.id), method: :patch %>
-      </div>
-
-      <div class="button btn btn-confirm">
-      <%= link_to 'Refuse Rental', refuse_owner_rental_path(rental.id), method: :patch %>
-      </div>
-<% else %>
-<% end %>
-<% end %>
+<div class="title-owner">
+  <h1>See your current rentals</h1>
 </div>
+
+<% @rentals.each do |rental|%>
+  <div class="card-owner-rentals">
+    <div class="text-info-rentals">
+      <h3><%= rental.user.first_name %> <%= rental.user.last_name %></h3>
+      <h3><%= rental.created_at.strftime("%d %m %Y") %></h3>
+
+      <h3><%= rental.start_on.strftime("%d %m %Y") %></h3>
+      <h3><%= rental.end_on.strftime("%d %m %Y") %></h3>
+
+      <h3><%= rental.tree.name %></h3>
+      <h3><%= rental.status %></h3>
+      <h3>$<%= rental.total_price %></h3>
+
+      <h3>You updated this rental on <%= rental.updated_at.strftime("%d %m %Y") %></h3>
+
+      <div class="confirmation">
+        <% if rental.status == 'pending' %>
+        <div class="flex-buttons">
+          <%=  link_to 'Accept Rental', accept_owner_rental_path(rental.id), class: "btn-tree-show", method: :patch%>
+          <%= link_to 'Refuse Rental', refuse_owner_rental_path(rental.id), class: "btn-tree-show", method: :patch %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
