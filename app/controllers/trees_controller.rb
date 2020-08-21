@@ -12,6 +12,21 @@ class TreesController < ApplicationController
     end
   end
 
+  def new
+    @tree = Tree.new
+
+  end
+
+  def create
+    @tree = Tree.new(tree_params)
+    @tree.user = current_user
+    if @tree.save
+      redirect_to owner_trees_path
+    else
+      render :new
+    end
+  end
+
   def show
     @rental = Rental.new
   end
@@ -23,6 +38,6 @@ class TreesController < ApplicationController
   end
 
   def tree_params
-    params.require(:tree).permit(:name, :description, :species, :address, :size, :weight, :price, :user_id, :photo [])
+    params.require(:tree).permit(:name, :description, :species, :address, :size, :weight, :price, :user_id, :photo)
   end
 end
