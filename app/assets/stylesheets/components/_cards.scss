@@ -178,7 +178,54 @@ opacity: 0.9;
   }
 }
 
+
+.card-owner-rentals {
+  // display: flex;
+  margin-left: 30px;
+  margin-top: 30px;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
+  font-family:'Work Sans';
+  font-size: 10px;
+
+  h2 {
+    margin-left: 30px;
+    font-family:'Work Sans';
+    font-size: 20px;
+  }
+
+  h3 {
+    margin-left: 30px;
+    margin-top: 10px;
+    font-family:'Work Sans';
+    font-size: 20px;
+
+  }
+
+  p {
+    margin-left: 30px;
+    font-family:'Work Sans';
+    font-size: 10px;
+  }
+}
+
+  .text-info-rentals {
+    width: 70%;
+  }
+
+//   .card-photo {
+//     margin: 20px;
+//     width: 30%;
+//     height: 250px;
+//     // display: block;
+//     background-position: center;
+//     background-size: cover;
+// }
+
+
 .card_index {
   width: 100%;
   border-bottom: solid 5px #222222;
 }
+
