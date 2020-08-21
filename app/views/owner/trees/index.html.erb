@@ -1,14 +1,23 @@
-<div class="cards-owner">
-<% @trees.each do |tree|%>
-<h2><%= tree.name %></h2>
-<h3><%= tree.species %></h3>
-<p><%= tree.description %></p>
-<h3><%= tree.address %></h3>
-<h3><%= tree.size %></h3>
-<h3><%= tree.weight %></h3>
-<h3><%= tree.price %></h3>
-<% end %>
+<div class="title-owner">
+  <h1>Your Trees</h1>
 </div>
+
+<% @trees.each do |tree|%>
+  <div class="card-owner-tree">
+    <div class="text-card">
+      <h2><%= tree.name %></h2>
+      <h3><%= tree.species %></h3>
+      <p><%= tree.description %></p>
+      <h3><%= tree.address %></h3>
+      <h3><%= tree.size %></h3>
+      <h3><%= tree.weight %></h3>
+      <h3><%= tree.price %></h3>
+    </div>
+    <div class="card-photo">
+      <%= cl_image_tag tree.photo.key %>
+    </div>
+  </div>
+<% end %>
 
 <div class="container-owner">
   <div class="button">
@@ -17,3 +26,4 @@
 </div>
 
 <%=link_to 'See Your Rentals', owner_rentals_path %>
+
