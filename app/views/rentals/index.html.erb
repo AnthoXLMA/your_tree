@@ -1,26 +1,23 @@
-<div class="text">
-  <p>Your pending reservations</p>
+<div class="title_text">
+  <p>Your reservations</p>
 </div>
 
 <div class="all_container">
   <div class="cards rent">
     <% @rentals.each do |rental| %>
       <div class="cards">
-        <%= link_to rentals_path(rental), class: 'link_tree' do %>
           <div class="card-category" style="background-image: url('<%= cl_image_path rental.tree.photo.key %>')"></div>
             <%#= link_to tree.name, tree_path(tree), class: "link_tree" %>
-             <p class="category"> <%= rental.tree.name %></p>
-        <% end %>
-      </div>
+        <h1 class="rent"> <%= rental.tree.name %></h1>
 
-      <%= link_to rentals_path(rental), class: 'link_tree' do %>
-        <h4 class="category rent">Start: <%= rental.start_on %></h4>
-        <h4 class="category rent">End: <%= rental.end_on %></p>
-        <h5 class="category rent">Total price: <%= rental.total_price %>$</h5>
-        <h5 class="category rent"><%= rental.user.first_name %> <%= rental.user.last_name %></h5>
-        <h6 class="category rent">Avatar owner: </h6>
-        <h6 class="category rent"> <%= rental.status %></h6>
-      <% end %>
+        <div>
+          <h4 class="rent"><%= rental.start_on %></h4>
+          <h4 class="rent"><%= rental.end_on %></h4>
+          <h5 class="rent">Total price: <%= rental.total_price %>$</h5>
+          <h5 class="rent"><%= rental.user.first_name %> <%= rental.user.last_name %></h5>
+          <h6 class="rent"> <%= rental.status %></h6>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
