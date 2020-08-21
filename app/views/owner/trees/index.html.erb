@@ -2,6 +2,14 @@
   <h1>Your Trees</h1>
 </div>
 
+<div class="container-owner">
+  <div class="button">
+    <%= link_to 'Create a new tree' %>
+  </div>
+</div>
+
+<%=link_to 'See Your Rentals', owner_rentals_path %>
+
 <% @trees.each do |tree|%>
   <div class="card-owner-tree">
     <div class="text-card">
