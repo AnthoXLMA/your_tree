@@ -37,3 +37,15 @@
   // top: 50%;
 }
 
+.submit {
+  background-color: #CD4A49;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.submit:hover {
+  background-color: #222222;
+  color: white;
+}
