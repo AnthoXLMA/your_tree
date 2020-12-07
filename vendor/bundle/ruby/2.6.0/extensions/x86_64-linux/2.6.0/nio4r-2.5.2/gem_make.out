@@ -1,5 +1,5 @@
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
-/home/thomasp/.rbenv/versions/2.6.6/bin/ruby -I /home/thomasp/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20201207-9526-1ju9oho.rb extconf.rb
+/home/thomasp/.rbenv/versions/2.6.6/bin/ruby -I /home/thomasp/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20201207-22789-sn9w9s.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... yes
 checking for sys/select.h... yes
@@ -94,4 +94,4 @@ linking shared-object nio4r_ext.so
 
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/nio4r-2.5.2/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20201207-9526-fdnv0k
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20201207-22789-1lmhcy4
