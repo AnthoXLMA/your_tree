@@ -10,12 +10,14 @@
   font-size: 35px;
   color:white;
   background-color: #CD4A49;
-  width: 100%;
+  width: 60vw;
+  margin: 10px auto;
   opacity: 0.9;
   display: flex;
   align-content: center;
   justify-content: center;
   padding-top: 10px;
+  border-radius: 1em;
 }
 
 .title-owner {
@@ -32,9 +34,8 @@
 }
 
 .text-card {
-  margin: 20px;
+  margin: 0px;
   font-family: 'Work Sans';
-  border-bottom: solid 5px #CD4A49;
 }
 .tree_names {
   background-color: #CD4A49;
@@ -43,6 +44,9 @@
 
 .tree_descriptions {
   margin-top: 10px;
+  position: center;
   background-color: #222222;
   color: white;
+  width: 50vw;
+  margin: auto;
 }

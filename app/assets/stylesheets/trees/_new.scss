@@ -2,17 +2,29 @@
 // .form-box {
 //     display: block;
 // }
-.tree-form {
-    margin: 0 30%;
-    background-color: none;
 
+.form-box {
+  margin: 4.5em 3em;
+  background-size: cover;
+}
+
+.tree-form {
+    margin: 1em 0 1em 0;
+    background-color: darkseagreen;
+    line-height: 0.8em;
+    border-radius: 1em;
+    padding: 0.5em;
+    width: 35%;
+    margin-left: 58vw;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
     h2 {
       text-align: center;
+      padding: 1em;
     }
     .btn-tree-show {
     border: none;
-    display: inline-block;
-    margin: 0 auto;
+    display: flex;
+    margin: 5em 0 -3em 0em;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
@@ -22,9 +34,16 @@
     color: #ede6f2;
     font-weight: 700;
     font-size: 15px;
-    background-color: #222;
-    padding: 17px 60px;
-    margin: 0 auto;
+    background-color: green;
+    padding: 10px 60px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    top: -3em;
   }
+}
+
+label {
+  color: #CD4A49;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
 }

@@ -1,8 +1,43 @@
+<section style=" height: 90%;">
+     <div class="leaf">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+
+     <div class="leaf leaf1">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+
+     <div class="leaf leaf2">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+  </section>
 <div class="title_text">
   <p>Your reservations</p>
 </div>
 
-<div class="all_container center">
+<!--<div class="all_container center">
   <div class="cards rent">
     <% @rentals.each do |rental| %>
         <div class="tree_name d-flex">
@@ -30,6 +65,67 @@
         <div class="card-category" style="background-image: url('<%= cl_image_path rental.tree.photo.key %>')"></div>
             <%#= link_to tree.name, tree_path(tree), class: "link_tree" %>
       </div>
+    <% end %>
+  </div>
+</div>-->
+
+
+<div class="wrapper" style ="margin: 10.9em 1em;">
+  <div class="cols">
+    <% @rentals.each do |rental| %>
+    <div class="col"  ontouchstart="this.classList.toggle('hover');">
+      <div class="containeer">
+
+
+
+
+      <% if rental.status == "accepted" %>
+        <div class="front" style="background-image: url('<%= cl_image_path rental.tree.photo.key %>'); box-shadow: 0px 6px 8px 0 green;">
+          <div class="inner">
+            <h1><%= rental.tree.name %></h1>
+            <h4 style="text-align: left;"><%= rental.start_on.strftime("%d.%m.%Y") %></h4>
+            <h4 style="transform: rotate(135deg); font-size: 2em"><i class="fas fa-long-arrow-alt-up"></i></h4>
+            <h4 style="text-align: right;"><%= rental.end_on.strftime("%d.%m.%Y") %></h4>
+            <h4 style="text-align: left;"><i class="fas fa-user"></i> <%= rental.user.first_name %> <%= rental.user.last_name %></h4>
+            <h4 style="text-align: right;"><i class="fas fa-hand-holding-usd"></i> <%= rental.total_price %>$</h4>
+      <% elsif rental.status == "refused" %>
+        <div class="front" style="background-image: url('<%= cl_image_path rental.tree.photo.key %>'); box-shadow: 0px 6px 8px 0 #CD4A49;">
+          <div class="inner">
+            <h1><%= rental.tree.name %></h1>
+            <h4 style="text-align: left;"><%= rental.start_on.strftime("%d.%m.%Y") %></h4>
+            <h4 style="transform: rotate(135deg); font-size: 2em"><i class="fas fa-long-arrow-alt-up"></i></h4>
+            <h4 style="text-align: right;"><%= rental.end_on.strftime("%d.%m.%Y") %></h4>
+            <h4 style="text-align: left;"><i class="fas fa-user"></i> <%= rental.user.first_name %> <%= rental.user.last_name %></h4>
+            <h4 style="text-align: right;"><i class="fas fa-hand-holding-usd"></i> <%= rental.total_price %>$</h4>
+      <% else %>
+        <div class="front" style="background-image: url('<%= cl_image_path rental.tree.photo.key %>')">
+          <div class="inner">
+            <h1><%= rental.tree.name %></h1>
+            <h4 style="text-align: left;"><%= rental.start_on.strftime("%d.%m.%Y") %></h4>
+            <h4 style="transform: rotate(135deg); font-size: 2em"><i class="fas fa-long-arrow-alt-up"></i></h4>
+            <h4 style="text-align: right;"><%= rental.end_on.strftime("%d.%m.%Y") %></h4>
+            <h4 style="text-align: left;"><i class="fas fa-user"></i> <%= rental.user.first_name %> <%= rental.user.last_name %></h4>
+            <h4 style="text-align: right;"><i class="fas fa-hand-holding-usd"></i> <%= rental.total_price %>$</h4>
+              <% end %>
+
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="inner">
+            <div>
+              <% if rental.status == "accepted" %>
+                <h2 style="background-color: green opacity:0.9; font-size: 2em; margin: -0.6em;"> <%= rental.status %></h2>
+              <% elsif rental.status == "refused" %>
+                <h2 style="background-color: #CD4A49 opacity:0.9; font-size: 2em; margin: -0.6em;"> <%= rental.status %></h2>
+              <% else %>
+                <h2 style="font-size: 2em; margin: -0.6em;"><%= rental.status %></h2>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>

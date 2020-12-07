@@ -81,4 +81,14 @@
 
 .btn-danger {
   background-color: #CD4A49;
+  border: 1px solid white;
+
+}
+.btn-danger:hover {
+  background-color: darkseagreen;
+  border: 1px solid white;
+}
+
+.btn-tree-show {
+  border-radius: 1em;
 }

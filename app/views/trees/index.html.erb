@@ -1,10 +1,45 @@
 <div class="all_container">
-  <div class="cards">
+  <!--<div class="cards">
+-->
+<section>
+     <div class="leaf">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
 
+     </div>
+
+     <div class="leaf leaf1">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+
+     <div class="leaf leaf2">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+</section>
     <div class="title_text">
       <p>Choose your tree for your next event</p>
     </div>
-    <div class="cards">
+    <!--<div class="cards">
       <% @trees.each do |tree| %>
         <div class="cards">
           <%= link_to tree_path(tree), class: 'link_tree' do %>
@@ -15,12 +50,145 @@
           <% end %>
         </div>
       <% end %>
+    </div>-->
+  <!--</div>-->
+
+
+
+  <div class="wrapper">
+
+  <div class="cols">
+    <% @trees.each do |tree| %>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="background-image: url('<%= cl_image_path tree.photo.key %>')">
+            <div class="inner">
+              <p><%= tree.name %></p>
+              <span><%= tree.species %></span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p><%= tree.description %></p>
+            <%= link_to tree_path(tree), class: 'link_tree' do %>
+              <button class="btn-danger" style="opacity: 0.9; border-radius: 10px; float: right;">En savoir plus</button>
+            <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+      <!--<div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="url(https://unsplash.it/511/511/)">
+            <div class="inner">
+              <p>Rocogged</p>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="background-image: url(https://unsplash.it/502/502/)">
+            <div class="inner">
+              <p>Strizzes</p>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="background-image: url(https://unsplash.it/503/503/)">
+            <div class="inner">
+              <p>Clossyo</p>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="background-image: url(https://unsplash.it/504/504/">
+            <div class="inner">
+              <p>Rendann</p>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="background-image: url(https://unsplash.it/505/505/)">
+            <div class="inner">
+              <p>Reflupper</p>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="background-image: url(https://unsplash.it/506/506/)">
+            <div class="inner">
+              <p>Acirassi</p>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col" ontouchstart="this.classList.toggle('hover');">
+        <div class="containeer">
+          <div class="front" style="background-image: url(https://unsplash.it/508/508/)">
+            <div class="inner">
+              <p>Sohanidd</p>
+              <span>Lorem ipsum</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+            </div>
+          </div>
+        </div>
+      </div>-->
     </div>
   </div>
-
   <div id="map"
-       style="width: 100%; height: 100vh;"
+       style="width: 80vw; height: 70vh; margin: 10px auto;"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
+

@@ -1,5 +1,5 @@
 <div class="all_container showw">
-  <div class="link_tree_show">
+  <!--<div class="link_tree_show">
   <div class="card_category_show" style="background-image: url('<%= cl_image_path @tree.photo.key %>')"></div>
 </div>
   <div class="show-right-part">
@@ -40,7 +40,7 @@
       </div>
 
       <div class="title-show">
-        <h2>$<%=@tree.price%></h2>
+        <h2>$<%=@tree.price%>/day</h2>
       </div>
 
       <%# <div class= "card-price"> %>
@@ -63,6 +63,104 @@
         <%#= link_to "See our trees", trees_path, class: "btn btn-to-index" %>
       </div>
       <% end %>
+    </div>
+  </div>-->
+
+<section style=" margin: 3em auto; height: 119vh;">
+     <div class="leaf">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+
+     <div class="leaf leaf1">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+
+     <div class="leaf leaf2">
+     <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
+      <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
+      <div>  <img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Clip-Art-PNG.png" height="75px" width="75px" ></img></div>
+      <div><img  src="http://www.pngmart.com/files/1/Green-Leaves-PNG-File.png" height="75px" width="75px"></img></div>
+
+       <div> <img src="http://www.pngmart.com/files/1/Transparent-Autumn-Leaves-Falling-PNG.png" height="75px" width="75px"></img></div>
+     <div>   <img src="http://www.pngmart.com/files/1/Realistic-Autumn-Fall-Leaves-PNG.png" height="75px" width="75px"></div>
+     <div><img src="http://cdn.clipart-db.ru/rastr/autumn_leaves_025.png" height="75px" width="75px"></div>
+
+     </div>
+     </section>
+
+
+  <div class="wrapper">
+    <div class="cols" style="width: 100%;">
+      <div class="col" style="width: 99vw;">
+        <div class="container" style=" width: 100vw; height: 102vh; padding:1em;">
+          <div class="front" style="background-image: url('<%= cl_image_path @tree.photo.key %>'); height:98vh">
+            <div class="inner" style=" padding: 1rem;">
+              <div class="title-show">
+                <h1 class="tree_names"><%=@tree.name%></h1>
+                <h3 class="tree_descriptions"><%=@tree.species%></h3>
+              </div>
+              <div class="description">
+                <div class="title-descr">
+                  <p style="font-size: 1em;"><%=@tree.description%></p>
+                </div>
+              </div>
+              <div class="trees-aspects">
+                <div class="size-tree">
+                  <% if @tree.size == 'small'%>
+                    <i class="fas fa-tree small" style="color:#CD4A49;"></i>
+                    <i class="fas fa-tree medium"></i>
+                    <i class="fas fa-tree large"></i>
+                  <% elsif @tree.size == 'medium' %>
+                    <i class="fas fa-tree small"></i>
+                    <i class="fas fa-tree medium"style="color:#CD4A49;"></i>
+                    <i class="fas fa-tree large"></i>
+                  <% else %>
+                    <i class="fas fa-tree small"></i>
+                    <i class="fas fa-tree medium"></i>
+                    <i class="fas fa-tree large" style="color:#CD4A49;"></i>
+                  <% end %>
+                </div>
+                <div class="title-w">
+                  <h2 style="font-size: 2em; font-weight: bold; text-align: left; margin-top: -2em; width: 2em;"><%=@tree.weight%></h2>
+                </div>
+                <div class="title-show">
+                  <h2 style="font-size: 2em; font-weight: bold; text-align: left; margin-top: -2em; width: 2em;">$<%=@tree.price%>/day</h2>
+                </div>
+
+      <%# <div class= "card-price"> %>
+      <%# </div> %>
+              </div>
+              <div class="card-owner">
+                <p style ="font-size: 1em;"><i class="fas fa-user"></i> This tree belongs to <strong><%=@tree.user.first_name%> <%=@tree.user.last_name%></strong><br><i class="fas fa-map-marked-alt"></i> <%=@tree.address%></p>
+              <div class="formul">
+                <%= simple_form_for [@tree, @rental] do |f| %>
+                  <div class="container_one">
+                    <p style=" margin-bottom: -0.5em;">Start</p><%= f.input :start_on, as: :date %>
+                    <p style=" margin-bottom: -0.5em;">End</p><%= f.input :end_on, as: :date %>
+                    <%= f.submit "Book Now", class: "btn-tree-show"%>
+                    <%#= link_to "See our trees", trees_path, class: "btn btn-to-index" %>
+                  </div>
+                <% end %>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

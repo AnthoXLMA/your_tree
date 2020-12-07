@@ -1,11 +1,11 @@
 body {
   position: relative;
-  padding-bottom: 50px;
+  bottom: 0;
 }
 
 .footer {
     background: white;
-    position: fixed;
+    position: bottom;
     bottom: 0;
     width: 100%;
     display: flex;

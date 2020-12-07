@@ -1,6 +1,12 @@
 // Specific CSS for your home-page
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
+$bg-color: #CD4A49;
+$link-text-color: #ede6f2;
+$button-bg-5: #F28123;
+$border-radius: 6px;
+$overlay-color: #222222;
+
 .colortext {
     color: #ede6f2;
 }
@@ -10,11 +16,19 @@
 }
 
 .homepage-banner {
-    // background-size: cover;
-    // background-position: center;
     padding: 100px 0 550px 0;
     text-align: center;
     height: 87.7vh;
+
+    .logo_tree {
+       width: auto;
+       margin-top: -3em;
+       img {
+         background-color: white;
+         opacity: 0.7;
+         border-radius: 2em;
+       }
+    }
 
     h1 {
         font-family: 'Permanent Marker', cursive;
@@ -33,7 +47,55 @@
         span {background-color: #CD4A49;}
     }
 
-    .btn-to-index {
+.effect {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: $link-text-color;
+  text-transform: capitalize;
+  background-color: rgba(#CD4A49, 0.9);
+  /* background-color: - add your own background-color */
+  font: {
+    family: 'Roboto', sans-serif; /* put your font-family */
+    size: 18px;
+  }
+  padding: 20px 0px;
+  width: 150px;
+  border-radius: $border-radius;
+  overflow: hidden;
+}
+
+.effect.effect-5 {
+  transition: all 0.2s linear 0s;
+
+  &:before {
+    content: "\27A4";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 30px;
+    background-color: rgba($overlay-color,1);
+    border-radius: 0 50% 50% 0;
+    transform: scale(0,1);
+    transform-origin: left center;
+    transition: all 0.2s linear 0s;
+  }
+
+   &:hover {
+    text-indent: 30px;
+
+    &:before {
+      transform: scale(1,1);
+      text-indent: 0;
+    }
+  }
+}
+    /*.btn-to-index {
         border: none;
         display: inline-block;
         margin: 0 auto;
@@ -69,13 +131,13 @@
     .btn-to-index:hover:after {
         -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
         transform: translateX(-9%) translateY(-25%) rotate(45deg);
-    }
+    }*/
 }
 .container_one {
     .btn-tree-show {
     border: none;
+    border-radius: 1em;
     display: inline-block;
-    margin: 0 auto;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
@@ -87,7 +149,7 @@
     font-size: 15px;
     background-color: #222;
     padding: 17px 60px;
-    margin: 0 auto;
+    margin: 1em auto;
     box-shadow: 0 5px 15px rgba(0,0,0,0.20);
   }
 

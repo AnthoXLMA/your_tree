@@ -52,7 +52,7 @@ baobab = Tree.new(
   address: "28 rue de Raymond Poincaré, 44300 Nantes",
   size: "small",
   weight: "66lb",
-  description: "A typical tree of dry tropical Africa, the baobab is the emblem of Senegal. This giant of the African savannas cannot survive in the open ground in mainland France. On the other hand, it is possible to welcome a baobab at home because a young plant can be grown as an indoor plant!",
+  description: "A typical tree of dry tropical Africa, the baobab is the emblem of Senegal. This giant of the African savannas cannot survive in the open ground in mainland France.",
   price: 5,
   user_id: bill.id
   )
@@ -66,7 +66,7 @@ cactus = Tree.new(
   address: "51 rue La Boétie, 75016 Paris",
   size: "medium",
   weight: "440lb",
-  description: "The cactus belongs to the family Cactaceae, which encompasses almost 2,000 different species, according to the Aggie Horticulture website of Texas A&M University. The cactus is an iconic representation of desert plant life, known for its prickly needles and often towering height.",
+  description: "The cactus belongs to the family Cactaceae, which encompasses almost 2,000 different species, according to the Aggie Horticulture website of Texas A&M University.",
   price: 5,
   user_id: bill.id
   )
@@ -79,7 +79,7 @@ sapin = Tree.new(
   address: "54 Chemin Des Bateliers, 49100 Angers",
   size: "large",
   weight: "1322lb",
-  description: "The fir trees are trees conifers of the genus Abies originating in temperate regions of the northern hemisphere. They are part of the Pinaceae family . They are recognizable by the way the needles attach to the shank, their shapes which differ from spruce, and their erect cones which disintegrate at maturity.",
+  description: "The fir trees are trees conifers of the genus Abies originating in temperate regions of the northern hemisphere. They are part of the Pinaceae family.",
   price: 10,
   user_id: bill.id
   )
@@ -92,7 +92,7 @@ pin = Tree.new(
   address: "22 rue du minage, 17000 La Rochelle",
   size: "large",
   weight: "1322lb",
-  description: "A pine is any conifer in the genus Pinus of the family Pinaceae. Pinus is the sole genus in the subfamily Pinoideae. The Plant List compiled by the Royal Botanic Gardens, Kew and Missouri Botanical Garden accepts 126 species names of pines as current, together with 35 unresolved species and many more synonyms. Pine may also refer to the lumber derived from pine trees; pine is one of the more extensively used types of wood used as lumber.",
+  description: "A pine is any conifer in the genus Pinus of the family Pinaceae. Pinus is the sole genus in the subfamily Pinoideae.",
   price: 10,
   user_id: jean.id
   )
@@ -105,7 +105,7 @@ chene = Tree.new(
   address: "3 rue des Minimes, 37926 Tours",
   size: "large",
   weight: "1322lb",
-  description: "Oak is the vernacular name for many species of trees and shrubs belonging to the genus Quercus , and some related genera of the Fagaceae family , notably Cyclobalanopsis and Lithocarpus .",
+  description: "Oak is the vernacular name for many species of trees and shrubs belonging to the genus Quercus.",
   price: 10,
   user_id: jean.id
   )
@@ -118,7 +118,7 @@ acacia = Tree.new(
   address: "Avenue de la République, 83056 Toulon",
   size: "large",
   weight: "1322lb",
-  description: "Acacia, commonly known as the wattles or acacias, is a large genus of shrubs and trees in the subfamily Mimosoideae of the pea family Fabaceae. Initially, it comprised a group of plant species native to Africa and Australia.",
+  description: "Acacia, commonly known as the wattles or acacias, is a large genus of shrubs and trees in the subfamily Mimosoideae of the pea family Fabaceae.",
   price: 10,
   user_id: bill.id
   )
@@ -131,7 +131,7 @@ palmier = Tree.new(
   address: "Promenade des Anglais, 06000 Nice",
   size: "large",
   weight: "1322lb",
-  description: "A palm tree is a plant of the Arecaceae botanical family , well known by date palms and coconut palms . Palm trees take the form of perennial lianas , shrubs and trees . They are the only members of the only Arecaceae family in the order Arecales. They grow in hot climates.",
+  description: "A palm tree is a plant of the Arecaceae botanical family.",
   price: 10,
   user_id: bill.id
   )
@@ -144,7 +144,7 @@ pommier = Tree.new(
   address: "Place du Général-de-Gaulle, 76000 Rouen",
   size: "large",
   weight: "1322lb",
-  description: "The apple trees are trees of the genus botanical Malus and the family of Rosaceae , the fruit is the apple . This genus includes some forty species of trees or shrubs , the most important of which, in terms of human nutrition , is the domestic apple tree ( Malus domestica ). Today we know more than 20,000 varieties.",
+  description: "The apple trees are trees of the genus botanical Malus and the family of Rosaceae , the fruit is the apple.",
   price: 10,
   user_id: jean.id
   )
