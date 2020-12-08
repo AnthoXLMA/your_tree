@@ -27,7 +27,6 @@ require("turbolinks").start()
 
 // External imports
 import "bootstrap";
-import "../plugins/flatpickr";
 import { initMapBox } from '../plugins/init_mapbox';
 
 // Internal imports, e.g:
