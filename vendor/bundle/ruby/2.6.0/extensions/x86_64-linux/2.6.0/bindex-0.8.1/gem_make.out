@@ -1,0 +1,15 @@
+current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+/home/thomasp/.rbenv/versions/2.6.6/bin/ruby -I /home/thomasp/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20201208-30880-e0op71.rb extconf.rb
+creating Makefile
+
+current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20201208-30880-zkvpzh/skiptrace/internal
