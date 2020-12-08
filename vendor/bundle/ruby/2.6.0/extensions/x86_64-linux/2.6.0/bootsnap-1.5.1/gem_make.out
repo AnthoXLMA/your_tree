@@ -1,5 +1,5 @@
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
-/home/thomasp/.rbenv/versions/2.6.6/bin/ruby -I /home/thomasp/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20201207-50139-ko36ni.rb extconf.rb
+/home/thomasp/.rbenv/versions/2.6.6/bin/ruby -I /home/thomasp/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20201208-40165-18s0p84.rb extconf.rb
 creating Makefile
 
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
@@ -36,4 +36,4 @@ linking shared-object bootsnap/bootsnap.so
 
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20201207-50139-xohivb/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20201208-40165-173o2hn/bootsnap

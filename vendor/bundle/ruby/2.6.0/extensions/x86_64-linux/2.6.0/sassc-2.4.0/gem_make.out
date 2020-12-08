@@ -1,5 +1,5 @@
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
-/home/thomasp/.rbenv/versions/2.6.6/bin/ruby -I /home/thomasp/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20201207-38609-73rzyb.rb extconf.rb
+/home/thomasp/.rbenv/versions/2.6.6/bin/ruby -I /home/thomasp/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20201208-40165-hulzt2.rb extconf.rb
 creating Makefile
 
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.so
 
 current directory: /home/thomasp/code/PfalzgraffT/your_tree/vendor/bundle/ruby/2.6.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20201207-38609-1lyizs/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20201208-40165-c08hr2/sassc
