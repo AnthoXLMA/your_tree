@@ -39,3 +39,12 @@ body {
   .img-logo {
       width: 30px;
   }
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 1em;
+  }
+  .footer-copyright {
+    font-size:0.7em;
+  }
+}

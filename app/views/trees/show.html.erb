@@ -106,7 +106,7 @@
   <div class="wrapper">
     <div class="cols" style="width: 100%;">
       <div class="col" style="width: 99vw;">
-        <div class="container" style=" width: 100vw; height: 102vh; padding:1em;">
+        <div class="container">
           <div class="front" style="background-image: url('<%= cl_image_path @tree.photo.key %>'); height:98vh">
             <div class="inner" style=" padding: 1rem;">
               <div class="title-show">
@@ -135,10 +135,10 @@
                   <% end %>
                 </div>
                 <div class="title-w">
-                  <h2 style="font-size: 2em; font-weight: bold; text-align: left; margin-top: -2em; width: 2em;"><%=@tree.weight%></h2>
+                  <h2><%=@tree.weight%></h2>
                 </div>
                 <div class="title-show">
-                  <h2 style="font-size: 2em; font-weight: bold; text-align: left; margin-top: -2em; width: 2em;">$<%=@tree.price%>/day</h2>
+                  <h2>$<%=@tree.price%>/day</h2>
                 </div>
 
       <%# <div class= "card-price"> %>

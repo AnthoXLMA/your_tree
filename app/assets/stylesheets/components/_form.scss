@@ -10,11 +10,19 @@
 }
 .container_one {
   background-color: #CD4A49;
-  width: 30vw;
+  width: 45vw;
   padding: 1em;
   display: inline-block;
   border-radius: 1em;
   margin-left: 1em;
+}
+@media (max-width: 767px) {
+  .container_one {
+    margin-left: -1em;
+    width: 73vw;
+    line-height: 1em;
+    margin-top: -2em;
+  }
 }
 
 .formul {
