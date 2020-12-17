@@ -277,6 +277,9 @@ opacity: 0.9;
   .col .container {
     width: 90vw;
   }
+  .col .container_show {
+    height: 118vh;
+  }
 }
 
 .containeer{
@@ -401,8 +404,17 @@ opacity: 0.9;
   position: relative;
 }
 
+@media (max-width: 767px) {
+  .front .inner p {
+    font-size: 0.7em;
+    //margin-right: 0.5em;
+    //margin-bottom: -1em;
+    //margin-top: 2.5em;
+    margin: 2.5em 0.5em -1em 0em
+  }
+}
+
 .front .inner p:after{
-  content: '';
   width: 4rem;
   height: 2px;
   position: absolute;

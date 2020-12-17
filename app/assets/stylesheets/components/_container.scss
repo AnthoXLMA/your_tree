@@ -54,3 +54,38 @@
     border-radius: 1em;
   }
 }
+
+@media screen and (max-width: 64rem){
+
+  .all_container {
+    width: 100%;
+  }.container-owner{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 48rem){
+
+  .all_container {
+    width: 100%;
+  }.container-owner{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .all_container {
+    width: 100%;
+    display: inline-block;
+  }
+  .container-owner{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+  .card-owner-tree {
+    width: 100%;
+    .card-photo {
+      width: 100%;
+    }
+  }
+}

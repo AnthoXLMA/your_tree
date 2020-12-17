@@ -181,9 +181,12 @@ $overlay-color: #222222;
 @media (max-width: 767px) {
   .homepage-banner {
     padding: 4em 0;
-    height: 86.3vh;
+    height: 82.6vh;
     p {
       margin-bottom: 1em;
+    }
+    h1{
+      font-size: 4em;
     }
   }
 }

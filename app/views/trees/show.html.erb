@@ -66,7 +66,7 @@
     </div>
   </div>-->
 
-<section style=" margin: 3em auto; height: 119vh;">
+<section class="section_show">
      <div class="leaf">
      <div>  <img src="http://www.pngmart.com/files/1/Fall-Autumn-Leaves-Transparent-PNG.png" height="75px" width="75px"></img></div>
       <div><img src="http://www.pngmart.com/files/1/Autumn-Fall-Leaves-Pictures-Collage-PNG.png" height="75px" width="75px"></img></div>
@@ -103,19 +103,19 @@
      </section>
 
 
-  <div class="wrapper">
+  <div class="wrapper_show wrapper">
     <div class="cols" style="width: 100%;">
       <div class="col" style="width: 99vw;">
-        <div class="container">
-          <div class="front" style="background-image: url('<%= cl_image_path @tree.photo.key %>'); height:98vh">
-            <div class="inner" style=" padding: 1rem;">
+        <div class="container_show container">
+          <div class="front_show front" style="background-image: url('<%= cl_image_path @tree.photo.key %>');">
+            <div class="inner_show inner">
               <div class="title-show">
                 <h1 class="tree_names"><%=@tree.name%></h1>
                 <h3 class="tree_descriptions"><%=@tree.species%></h3>
               </div>
               <div class="description">
                 <div class="title-descr">
-                  <p style="font-size: 1em;"><%=@tree.description%></p>
+                  <p><%=@tree.description%></p>
                 </div>
               </div>
               <div class="trees-aspects">
@@ -145,12 +145,12 @@
       <%# </div> %>
               </div>
               <div class="card-owner">
-                <p style ="font-size: 1em;"><i class="fas fa-user"></i> This tree belongs to <strong><%=@tree.user.first_name%> <%=@tree.user.last_name%></strong><br><i class="fas fa-map-marked-alt"></i> <%=@tree.address%></p>
+                <p class="p_show"><i class="fas fa-user"></i> This tree belongs to <strong><%=@tree.user.first_name%> <%=@tree.user.last_name%></strong><br><i class="fas fa-map-marked-alt"></i> <%=@tree.address%></p>
               <div class="formul">
                 <%= simple_form_for [@tree, @rental] do |f| %>
                   <div class="container_one">
-                    <p style=" margin-bottom: -0.5em;">Start</p><%= f.input :start_on, as: :date %>
-                    <p style=" margin-bottom: -0.5em;">End</p><%= f.input :end_on, as: :date %>
+                    <p class="p_container_one">Start</p><%= f.input :start_on, as: :date %>
+                    <p class="p_container_one">End</p><%= f.input :end_on, as: :date %>
                     <%= f.submit "Book Now", class: "btn-tree-show"%>
                     <%#= link_to "See our trees", trees_path, class: "btn btn-to-index" %>
                   </div>
